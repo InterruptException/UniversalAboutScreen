@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppAboutScreenActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintWidth_percent="0.3"
+        android:contentDescription="logo"
+        tools:background="#000000"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_marginTop="10dp"
+        tools:text="AppName"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:id="@+id/version_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="版本号："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/version_number"
+        app:layout_constraintBottom_toTopOf="@id/icp_number_label"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/version_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="v1.0"
+        app:layout_constraintStart_toEndOf="@id/version_number_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/version_number_label"
+        />
+
+    <TextView
+        android:id="@+id/icp_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ICP备案号："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/icp_number"
+        app:layout_constraintBottom_toTopOf="@id/privacy"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/icp_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:linksClickable="true"
+        tools:text="粤ICP备XXXXXXXX"
+        app:layout_constraintStart_toEndOf="@id/icp_number_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icp_number_label"
+        />
+
+    <TextView
+        android:id="@+id/privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="隐私政策与服务条款"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/website_label"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        />
+
+
+    <TextView
+        android:id="@+id/website_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="官网："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/website"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginBottom="50dp"
+        />
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="https://runfeng1688.com/"
+        android:autoLink="web"
+        app:layout_constraintStart_toEndOf="@id/website_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/website_label"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
