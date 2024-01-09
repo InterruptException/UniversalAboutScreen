@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -26,7 +28,14 @@ public class AppPrivacyScreenActivity extends AppCompatActivity {
         String link = getIntent().getStringExtra("LINK");
         assert link != null;
         WebView wv = findViewById(R.id.wv);
+        wv.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                return false;
+            }
+        });
         wv.loadUrl(link);
+
 
     }
 }
